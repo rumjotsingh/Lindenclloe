@@ -1,0 +1,44 @@
+.homeContainer{
+    display: flex;
+}
+.homeContainer >div:nth-child(odd){
+ flex: 0.2;   
+}
+.homeContainer >div:nth-child(even){
+    flex: 0.6;
+}
+.homeContainer_leftBar{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
+  gap: 1.2rem;
+  border-right: 1px solid rgb(222, 222,222);
+}
+.sidebaroptions{
+ display: flex;
+ align-items: center; 
+ font-size: 1.4rem;  
+ gap: 1.2rem;
+ 
+ 
+ cursor: pointer;
+ transition: all 0.2s;
+
+
+}
+.sidebaroptions:hover{
+    transform: scale(1.04);
+}
+.sidebaroptions >svg{
+  height: 1.4em;
+}
+.homeContainer_extraContanier{
+  border-right:1px solid black;
+  padding-left:1.2rem;
+}
+.homeContainer_feedContainer{
+  padding-inline: 0.8rem;
+  
+
+}
