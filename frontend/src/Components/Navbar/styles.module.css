@@ -1,28 +1,77 @@
-.container{
+/* Base Styles */
+.container {
     padding: 1rem;
 }
-.navbar{
 
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.navbaroptionscontainer{
-   display: flex;
-   align-items: center;
-   justify-content: center;
 
+.navbaroptionscontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.buttonjoin{
+
+.buttonjoin {
     width: fit-content;
     cursor: pointer;
     user-select: none;
     transition: all 0.2s;
     margin-top: 0.8rem;
     font-size: 1.2rem;
-    background: rgb(197,44,208);
+    background: rgb(197, 44, 208);
     color: white;
     padding-inline: 1.5rem;
     padding-block: 0.1rem;
     border-radius: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.8rem; /* Reduce padding for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .navbaroptionscontainer {
+        justify-content: flex-start; /* Align options to the start */
+        gap: 1rem; /* Add spacing between options */
+        flex-wrap: wrap; /* Wrap options for smaller screens */
+    }
+
+    .buttonjoin {
+        font-size: 1rem; /* Reduce font size */
+        padding-inline: 1rem; /* Adjust padding for smaller buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem; /* Further reduce padding */
+    }
+
+    .navbar {
+        align-items: center;
+        gap: 0.6rem; /* Reduce gap between navbar items */
+    }
+
+    .navbaroptionscontainer {
+        flex-direction: column; /* Stack options vertically */
+        align-items: flex-start; /* Align options to the left */
+        gap: 0.5rem; /* Reduce spacing */
+    }
+
+    .buttonjoin {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        padding-inline: 0.8rem;
+        padding-block: 0.2rem;
+    }
 }
