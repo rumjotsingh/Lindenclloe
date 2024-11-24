@@ -1,13 +1,15 @@
-.Contanier{
+/* Base Styles */
+.Contanier {
     padding: 1.3rem;
     background: rgb(248, 247, 247);
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
+    margin: 0 auto; /* Center alignment for larger screens */
 }
-.backDropContainer{
+
+.backDropContainer {
     width: 90%;
     height: 30vh;
     background: url("../../../public/images/banner.jpg");
@@ -15,71 +17,136 @@
     background-repeat: no-repeat;
     position: relative;
     border-radius: 10px;
+    margin: 0 auto; /* Center alignment */
+}
 
+.backDropContainer img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
 }
-.backDropContainer img{
-  width: 8rem;
-  height: 8rem;
-  object-fit: cover;
-  border-radius: 50%;
-  position: absolute;
-  top: 60%;
-  left: 5%;
-  text-align: center;
-}
-.ProfileContainer_details{
+
+.ProfileContainer_details {
     padding-top: 4rem;
 }
-.card{
+
+.card {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
-.card_profileContanier{
+
+.card_profileContanier {
     display: flex;
 }
-.card_profileContanier > img{
+
+.card_profileContanier > img {
     width: 3.4rem;
-    height: auto;
     height: 3.4rem;
     object-fit: cover;
 }
-.connection_btn{
+
+.connection_btn,
+.connectionsButton {
     padding-inline: 0.8rem;
     padding-block: 0.3rem;
-    background: rgba(3, 93,183, 0.905);
+    background: rgba(3, 93, 183, 0.905);
     outline: none;
     border: none;
     color: white;
     border-radius: 10px;
     cursor: pointer;
-   
+    width: fit-content;
 }
-.connectionsButton{
-    padding-inline: 0.8rem;
-    padding-block: 0.3rem;
-    background: rgba(3, 93,183, 0.905);
-    outline: none;
-    border: 1px solid ;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-left: 5rem;
-}
-.workHistoryContainer{
+
+.workHistoryContainer {
     display: flex;
-   
-    
-    gap:2rem;
+    gap: 2rem;
     padding-top: 1.4rem;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
 }
-.workHistoryCard{
-   min-width: fit-content;
-   padding-inline: 2.5rem;
-   padding-block: 1rem;
-   border-radius: 10px;
-   box-shadow:  10px 10px 15px rgb(173,173,173);
-   margin-left: 4rem;
+
+.workHistoryCard {
+    min-width: fit-content;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(173, 173, 173);
+    margin-left: 4rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Contanier {
+        width: 90%;
+        gap: 1.5rem;
+    }
+
+    .backDropContainer {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .backDropContainer img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .workHistoryCard {
+        margin-left: 0;
+        padding-inline: 1.5rem;
+    }
+
+    .ProfileContainer_details {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Contanier {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .backDropContainer {
+        height: 20vh;
+    }
+
+    .backDropContainer img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .card {
+        gap: 0.8rem;
+    }
+
+    .workHistoryContainer {
+        gap: 1rem;
+    }
+
+    .workHistoryCard {
+        padding-inline: 1rem;
+        padding-block: 0.8rem;
+    }
+
+    .connection_btn,
+    .connectionsButton {
+        padding-inline: 0.5rem;
+        padding-block: 0.2rem;
+        font-size: 0.9rem;
+    }
 }
