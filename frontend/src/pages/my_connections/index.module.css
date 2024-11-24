@@ -1,29 +1,80 @@
-.userCard{
+/* Base Styles */
+.userCard {
     display: flex;
     width: 80%;
     padding: 1.3rem;
     align-items: center;
-    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.ProfilePicture{
- width: 6.5rem;
- border-radius: 50%;
+
+.ProfilePicture {
+    width: 6.5rem;
+    border-radius: 50%;
 }
-.myConnections{
+
+.myConnections {
     display: flex;
     width: 100%;
     justify-content: center;
     padding-bottom: 1.5rem;
     cursor: pointer;
 }
-.connectionsButton{
+
+.connectionsButton {
     padding-inline: 0.8rem;
     padding-block: 0.3rem;
-    background: rgba(3, 93,183, 0.905);
+    background: rgba(3, 93, 183, 0.905);
     outline: none;
     border: none;
     color: white;
     border-radius: 10px;
     cursor: pointer;
-   
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .userCard {
+        flex-direction: column; /* Stack content vertically */
+        width: 90%; /* Reduce width */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        text-align: center; /* Center align text for cleaner layout */
+        gap: 1rem; /* Add space between elements */
+    }
+
+    .ProfilePicture {
+        width: 5rem; /* Reduce profile picture size */
+    }
+
+    .myConnections {
+        justify-content: center; /* Ensure center alignment */
+        padding-bottom: 1rem; /* Reduce bottom padding */
+    }
+
+    .connectionsButton {
+        font-size: 0.9rem; /* Adjust font size */
+        padding-inline: 0.6rem; /* Reduce padding */
+        padding-block: 0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .userCard {
+        width: 95%; /* Maximize usage of small screen space */
+        box-shadow: none; /* Simplify design by removing shadow */
+        gap: 0.8rem; /* Reduce spacing for smaller screens */
+    }
+
+    .ProfilePicture {
+        width: 4rem; /* Further reduce profile picture size */
+    }
+
+    .connectionsButton {
+        font-size: 0.8rem; /* Smaller button text */
+        padding-inline: 0.5rem; /* Adjust padding */
+        padding-block: 0.2rem;
+    }
+
+    .myConnections {
+        padding-bottom: 0.8rem; /* Minimize padding for compact layout */
+    }
 }
