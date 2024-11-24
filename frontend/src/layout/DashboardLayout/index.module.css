@@ -1,44 +1,91 @@
-.homeContainer{
-    display: flex;
+/* Base Styles */
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
-.homeContainer >div:nth-child(odd){
- flex: 0.2;   
+
+.homeContainer > div:nth-child(odd) {
+  flex: 0.2;
 }
-.homeContainer >div:nth-child(even){
-    flex: 0.6;
+
+.homeContainer > div:nth-child(even) {
+  flex: 0.6;
 }
-.homeContainer_leftBar{
+
+.homeContainer_leftBar {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  
+  align-items: flex-start;
   gap: 1.2rem;
-  border-right: 1px solid rgb(222, 222,222);
+  border-right: 1px solid rgb(222, 222, 222);
 }
-.sidebaroptions{
- display: flex;
- align-items: center; 
- font-size: 1.4rem;  
- gap: 1.2rem;
- 
- 
- cursor: pointer;
- transition: all 0.2s;
 
+.sidebaroptions {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 
+.sidebaroptions:hover {
+  transform: scale(1.04);
 }
-.sidebaroptions:hover{
-    transform: scale(1.04);
-}
-.sidebaroptions >svg{
+
+.sidebaroptions > svg {
   height: 1.4em;
 }
-.homeContainer_extraContanier{
-  border-right:1px solid black;
-  padding-left:1.2rem;
-}
-.homeContainer_feedContainer{
-  padding-inline: 0.8rem;
-  
 
+.homeContainer_extraContanier {
+  border-right: 1px solid black;
+  padding-left: 1.2rem;
+}
+
+.homeContainer_feedContainer {
+  padding-inline: 0.8rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .homeContainer > div:nth-child(odd),
+  .homeContainer > div:nth-child(even) {
+      flex: 1; /* Full width for smaller screens */
+  }
+
+  .homeContainer_leftBar {
+      gap: 0.8rem; /* Adjust spacing for smaller screens */
+  }
+
+  .sidebaroptions {
+      font-size: 1.2rem; /* Smaller font size for sidebar options */
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+      flex-direction: column; /* Stack the layout vertically */
+  }
+
+  .homeContainer_leftBar,
+  .homeContainer_feedContainer,
+  .homeContainer_extraContanier {
+      border-right: none; /* Remove unnecessary borders */
+      padding: 0.8rem; /* Adjust padding */
+  }
+
+  .sidebaroptions {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeContainer {
+      flex-direction: column;
+  }
+
+  .sidebaroptions {
+      gap: 0.6rem; /* Reduce gap for very small screens */
+      font-size: 0.9rem; /* Smaller font size */
+  }
 }
