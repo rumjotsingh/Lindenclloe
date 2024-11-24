@@ -1,21 +1,57 @@
-.UserCard{
-   display: flex;
-   gap: 1.2rem;
-   padding:1.3rem;
-   align-items: center;
-   box-shadow: 10px 10px 10px 0px rgba(0, 0,0, 0.1);
-   cursor: pointer;   
+/* Base Styles */
+.UserCard {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.3rem;
+    align-items: center;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
-.usercard_image{
+
+.usercard_image {
     width: 10%;
     border-radius: 50%;
 }
-.userProfilePicture{
+
+.userProfilePicture {
     max-width: 80%;
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .UserCard {
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.8rem;
+        padding: 1rem;
+        text-align: center; /* Center-align for better presentation */
+    }
 
+    .usercard_image {
+        width: 20%; /* Increase image size for better visibility */
+    }
+
+    .userProfilePicture {
+        gap: 0.8rem; /* Reduce gap between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .UserCard {
+        padding: 0.8rem;
+        gap: 0.6rem;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for mobile */
+    }
+
+    .usercard_image {
+        width: 30%; /* Adjust image size for very small screens */
+    }
+
+    .userProfilePicture {
+        max-width: 100%; /* Allow the container to take full width */
+        gap: 0.6rem;
+    }
 }
