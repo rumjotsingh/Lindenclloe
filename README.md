@@ -1,1 +1,5 @@
-This is project is only optimited for the computer and laptops and not For the mobile .
+This is project.
+LINKED CLONE IMPLNETED THE LIKE SAND DISILIKES FEATURES.
+UPLOAD PHOTO .
+Connnections.
+
